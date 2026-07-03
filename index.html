@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>來自失聯的妻子的禮物手札四小則</title>
+	<meta name="description" content="互動式小說｜來自失聯的妻子的禮物手札四小則（含隱藏段落與Good End）" />
+	<style>
+		:root{
+			--bg:#0f1115;
+			--card:#151923;
+			--text:#e9ecf1;
+			--muted:#aab2c0;
+			--line:#263044;
+			--accent:#caa6ff;
+			--accent2:#79d7ff;
+			--shadow: 0 10px 30px rgba(0,0,0,.35);
+			--radius:16px;
+		}
+		@media (prefers-color-scheme: light){
+			:root{
+				--bg:#f6f4ee;
+				--card:#ffffff;
+				--text:#171717;
+				--muted:#5b616e;
+				--line:#e5e1d6;
+				--accent:#6f3cff;
+				--accent2:#006e99;
+				--shadow: 0 10px 30px rgba(25,25,25,.08);
+			}
+		}
+		body{
+			margin:0;
+			background: radial-gradient(1200px 800px at 20% 10%, rgba(202,166,255,.12), transparent 55%),
+						radial-gradient(900px 700px at 80% 30%, rgba(121,215,255,.10), transparent 50%),
+						var(--bg);
+			color:var(--text);
+			font-family: ui-serif, "Noto Serif TC", "Source Han Serif TC", "Songti TC", "PMingLiU", serif;
+			line-height:1.85;
+			letter-spacing:.2px;
+		}
+		a{ color: var(--accent2); text-decoration: none; }
+		a:hover{ text-decoration: underline; }
+		.wrap{
+			max-width: 880px;
+			margin: 0 auto;
+			padding: 40px 20px 80px;
+		}
+		header{
+			background: linear-gradient(180deg, rgba(202,166,255,.14), rgba(121,215,255,.10));
+			border: 1px solid var(--line);
+			box-shadow: var(--shadow);
+			border-radius: var(--radius);
+			padding: 26px 22px;
+		}
+		.kicker{
+			font-family: ui-sans-serif, system-ui, -apple-system, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+			color: var(--muted);
+			font-size: 13px;
+			letter-spacing: .12em;
+			text-transform: uppercase;
+			margin-bottom: 8px;
+		}
+		h1{
+			margin: 0 0 8px;
+			font-size: 28px;
+			line-height:1.25;
+		}
+		.subtitle{
+			margin:0;
+			color:var(--muted);
+			font-family: ui-sans-serif, system-ui, -apple-system, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+			font-size:14px;
+		}
+		.nav{
+			display:flex;
+			flex-wrap:wrap;
+			gap:10px;
+			margin-top:16px;
+		}
+		.btn{
+			border:1px solid var(--line);
+			background: rgba(255,255,255,.04);
+			color: var(--text);
+			padding: 10px 12px;
+			border-radius: 999px;
+			font-family: ui-sans-serif, system-ui, -apple-system, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+			font-size: 13px;
+			cursor:pointer;
+			transition: transform .04s ease, background .15s ease;
+		}
+		.btn:hover{ background: rgba(255,255,255,.08); }
+		.btn:active{ transform: translateY(1px); }
+
+		main{ margin-top: 18px; }
+		.card{
+			background: rgba(255,255,255,.03);
+			border:1px solid var(--line);
+			box-shadow: var(--shadow);
+			border-radius: var(--radius);
+			padding: 18px 18px;
+			margin-top: 14px;
+		}
+		details{
+			background: var(--card);
+			border:1px solid var(--line);
+			border-radius: 14px;
+			padding: 12px 14px;
+			margin: 12px 0;
+		}
+		summary{
+			cursor: pointer;
+			font-family: ui-sans-serif, system-ui, -apple-system, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+			font-weight: 650;
+			letter-spacing:.02em;
+			outline: none;
+		}
+		details[open] summary{ color: var(--accent); }
+		.p{
+			margin: 10px 0 0;
+			white-space: pre-wrap;
+		}
+		hr{
+			border:none;
+			border-top:1px solid var(--line);
+			margin: 18px 0;
+		}
+		.footer{
+			margin-top: 18px;
+			color: var(--muted);
+			font-family: ui-sans-serif, system-ui, -apple-system, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+			font-size: 13px;
+		}
+		.small{
+			font-size: 13px;
+			color: var(--muted);
+			font-family: ui-sans-serif, system-ui, -apple-system, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrap">
+		<header>
+			<div class="kicker">Interactive Fiction · Minimal</div>
+			<h1>來自失聯的妻子的禮物手札四小則</h1>
+			<p class="subtitle">單頁互動閱讀：展開/收合＋段落導覽；含隱藏段落與 Good End。</p>
+
+			<div class="nav">
+				<button class="btn" id="openAll">全部展開</button>
+				<button class="btn" id="closeAll">全部收合</button>
+				<button class="btn" id="prev">上一段</button>
+				<button class="btn" id="next">下一段</button>
+				<a class="btn" href="#good-end">跳到 Good End</a>
+			</div>
+		</header>
+
+		<main class="card">
+			<p class="small"><strong>題旨：</strong>來自失聯的妻子的禮物手札四小則</p>
+
+			<details id="prologue">
+				<summary>序／前情</summary>
+				<div class="p">如題：續前篇《一枚銀如冰晶的戒指》松坂出了醫院並且再沒有回到熟悉的布拉克內爾森林，醒來的他確實是再也回不去了。由於這樣的癲狂和精神問題（他有夢囈的困擾，但由於從來他只住在單人病房，他沒有干擾到同住的病友的問題）據他的看護所說——這一名高壯且謙恭有禮的男人完全不在乎如果松坂對他做過任何無理取鬧的言行舉止——松坂很是感謝他。最近松坂開始拾回一些讀書的老習慣，閱讀是好事閱讀是好習慣，他讀呼嘯山莊，並且偶爾寫一些有的沒有的虛構短篇文字。至少看護認為那些是虛構的，就像松坂偶爾說「他太太會來見他。」「是真的。」「他們要過上他們的結婚第八周年紀念，只是這一年不巧出了點差錯罷了。」</div>
+			</details>
+
+			<details id="quote">
+				<summary>引文</summary>
+				<div class="p">來永遠纏住我吧／隨便變成什麼樣子都行
+把我逼瘋吧／只是千萬別把我留在
+這個找不到你的深淵。
+——艾米莉勃朗特《呼嘯山莊》</div>
+			</details>
+
+			<hr>
+
+			<details id="note-1">
+				<summary>手札之一</summary>
+				<div class="p">是這樣的，我並不記得我原來的名姓以及真正的家裡的故址，但是我擁有法國鄉間的口音，還有還記得「亞爾城」這個地方，於是我索性被稱為阿萊城。
+
+名字只是名字，稱呼只是稱呼，就好比能夠被某個人需要並且時刻掛記在心上這樣的事很美好。在過去，在我們真正成婚的七年之前，我說：他可以依賴我，就叫我姐姐吧。你需要一個擁抱嗎？啊啊，可以撒嬌的。他需要我。而我用同樣長的時間去回應這樣的需要，這份禮物大概就是在此時開始醞釀的……我花了很多、很多的時間思考這一次這一份驚喜要怎麼給，我們仍然會在夢中相遇，他總是哭，哭得像我們初見的時候，他是一個膽小、文雅、溫柔的男孩子，他相比其他人多依靠我一些，作為姐姐，當然會說「這樣的事就包在我身上吧」這樣的回應的，不可以讓信賴我的人擔憂受怕啊。
+
+另外，今天我買了新的烤皿。</div>
+			</details>
+
+			<details id="note-2">
+				<summary>手札之二</summary>
+				<div class="p">今天我烘烤了一人份小烤皿裝的蘋果派，猶豫了會該要維持原來的酥脆爽口呢？畢竟光是撒上肉桂粉和糖漿再以薄荷葉裝飾也是非常傳統又經典的美味的。可是呢，偶爾也會有這樣的日子吧，就是說呢，「總之還想要好好慶祝」或者「這種時候一定要好好慰勞自己甚至稍微放縱放鬆」的這種時候吧。如果是這種時候呢……就會想要稍微奢侈的再舀上一大勺漂亮的香草冰淇淋吧！松啊，很喜歡熱騰的蘋果派上再舀上灑了杏仁堅果的香草冰淇淋的。任誰都會為了這樣美好的口味移不開眼睛吧，但是太甜太膩的東西要是吃多了很不好的，所以我都會在平常的餐食精心設計過營養搭配和減糖配方，這樣一來難得的下午茶就也不會掃興了吧！
+
+話說回來……一個人果真吃不完蘋果派呢。所以松來的時候，沒有吃到蘋果派最剛出爐的美味時候，但是些微放涼了之後的果醬甜也是別有韻味。我問他「今天不用吃冰淇淋嗎？」他拒絕了，悶悶的聲音說不想（鬧彆扭的時候也是會有的呢）因為在療養期間已經吃過很多次冰淇淋了。我驚訝地問「療養難道也可以吃冰淇淋嗎？」他說沒有啊，感冒了，什麼也吃不下去，端來的食物他都不愛吃不想吃，還因此挨了親生姐姐的罵，所以呢，看護給他弄來了可以讓喉嚨消腫又一面能補充營養的醫療用冰淇淋，甜甜的，可是一旦吃冰淇淋就想吃蘋果派了。我笑了出來，這不就是本末倒置了嗎？</div>
+			</details>
+
+			<details id="note-3">
+				<summary>手札之三</summary>
+				<div class="p">松戴上了那枚戒指，他告訴我，森林之外的人聲稱我不存在，我是虛構，我是一種童話，我僅因他的思想和這股能夠被稱上頑強固執的熱愛存在。但是愛與無私的奉獻應該就是這樣的一回事吧，所以不成大問題的。
+
+這一天松來的時候，他瞇著眼睛，躺在我的雙腿上，圍裙墊著他在一年的三月送給我的裙子，是只屬於我的裙子，因為他帶了一匹布料回來，他說看到這個花色的布料於是想起我，他太興奮也太開心了，以至於忘了這樣的禮物有那麼點尷尬，因為送到了對方手上還得讓人付出一點勞力才不至於使得布料變成屋裡擺設一般的累贅。我說，可是松，可別忘了收下禮物的是姐姐我啊，無論是什麼樣的麻煩都請交給我吧，我一定會替你解決的。
+
+我撩動他的前額瀏海，露出一塊漂亮的額頭皮膚，晶瑩白皙，讓我懷疑起現實世界的他是否也是這樣健康又完整的樣子。他曾經曲著眉毛，他說想念我，需要我，沒有我的日子就好像惡夢一般，恨不得醉生夢死。事實上，七年以前，我沒有聰明到得已察覺他對我的愛意，我使他等待，據他所說，我的存在也成為了他臂膀的勇氣，他從未這樣勇敢過。
+
+松偶爾撒嬌的時候也會瞇著眼睛，像可憐的小兔子，他也有小小的狡猾的一面，用無傷大雅的苦肉計，而我每每會心軟。他說，留下來，或者，我去你那裡，阿萊萊。可是我捏著他戴著戒指的手指，摸著他掌心裡的肉，我說，我們從來沒有分離過，因為你的愛在這裡。我戳著他的胸膛，我說，所以我也在這裡。</div>
+			</details>
+
+			<details id="note-4">
+				<summary>手札之四</summary>
+				<div class="p">所以，請你不要走到讓我找不到你的地方，好嗎？</div>
+			</details>
+
+			<details id="note-5">
+				<summary>手札之五</summary>
+				<div class="p">我想要我仍然為你所需要，因為有你在的地方，就是家。</div>
+			</details>
+
+			<details id="note-6">
+				<summary>手札之六</summary>
+				<div class="p">這一天松回來的時候，我們用了一頓很好的晚餐。桌上仍然有蘋果派和兩球香草冰淇淋，淋上格紋網狀的榛果糖漿再灑上杏仁堅果碎，他斂起了漂亮的眼睛，這是一個外貌要比精神要更年輕的愛人，他給我帶來了好消息，他說，他已經被允許提前出院了，仍然吃藥，吃很苦的藥。所以，他要求想要更多、更多姐姐的蘋果派、蛋糕和冰淇淋——這一次，我說，好啊，想要多少就吃多少吧，都是為了松而準備的喔。
+
+我們沒有談論離別，沒有人掉下眼淚，可是我知道我世界上最勇敢的士兵肯定在他堅韌的底心裡勝過數百年的仗，然後帶著故事終末會出現的旗幟，提著象徵心魔的雄獅的頭像我而來，到那時，眼淚卻反而不再是軟弱的形象——松，你是下了什麼樣的決心而回到我身邊的呢。</div>
+			</details>
+
+			<details id="secret">
+				<summary>手札之????????（隱藏段落）</summary>
+				<div class="p">因為我愛你啊，我虛構的又無比真實的愛人。</div>
+			</details>
+
+			<details id="good-end">
+				<summary>Note：Good End</summary>
+				<div class="p">松出了院，出了他的布拉克內爾森林，他開始相信其餘沒有參與他的七年的人等，說阿萊城的姑娘不是一個真實存在的人，即便如此，他仍然心中有一種疑惑。那為什麼當年他得以擁有一枚戒指，一枚銀如冰晶的戒指，照理而言，這是不存在之物，因為阿萊城也不是一個真實存在的人，是他所幻想的，他懦弱的內心喚醒了的另一個溫柔的人來將他保護，像羽毛一樣輕盈，一張溫暖的百衲被將他赤裸幼稚的願望盡數包裹。所以，他仍然想不懂。可是既然是現代科學無可解釋的事物，那就交給「愛」來解釋吧。他這麼想。他仍然偶爾地夢到阿萊城的姑娘，在他們的小屋，松在心裡許了一個願，要活到一百年後的垂垂老矣，去見那時仍然年輕而美麗的她是否仍會對自己滿目柔情，如果是，那麼便能帶著這個答案，舒服地躺入永眠的墓地裡。</div>
+			</details>
+
+			<p class="footer">（完）</p>
+		</main>
+	</div>
+
+	<script>
+		const sections = Array.from(document.querySelectorAll("main details"));
+		let idx = 0;
+
+		function openAt(i){
+			idx = Math.min(Math.max(i, 0), sections.length - 1);
+			const el = sections[idx];
+			el.open = true;
+			el.scrollIntoView({ behavior: "smooth", block: "start" });
+		}
+
+		document.getElementById("openAll").addEventListener("click", () => {
+			sections.forEach(d => d.open = true);
+		});
+		document.getElementById("closeAll").addEventListener("click", () => {
+			sections.forEach(d => d.open = false);
+			openAt(0);
+		});
+
+		document.getElementById("next").addEventListener("click", () => openAt(idx + 1));
+		document.getElementById("prev").addEventListener("click", () => openAt(idx - 1));
+
+		// 初始：只展開序／前情
+		sections.forEach(d => d.open = false);
+		openAt(0);
+	</script>
+</body>
+</html>python3 -m http.server 8000
